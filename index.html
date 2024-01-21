@@ -1,22 +1,66 @@
 <html>
     <head>
         <style>
-            body {background-color: #212F3D;}
+            body {background-color: #212F3D; margin: 0;}
             .center {
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
             }
+            a {
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                color: white;
+                text-decoration: none;
+            }
+            h2 {
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                color: white;
+                text-decoration: none;
+            }
+            ul {
+                list-style-type: none;
+                margin: 0px;
+                width: 200px;
+            }
+            li a {
+                padding: 8px 16px;
+                display: block;
+                text-align: center;
+                font-size: 20px;
+                border-radius: 5px;
+            }
+            .purple:hover {
+                background-color: rgba(195, 0, 255, 0.532);
+                color: rgb(255, 255, 255);
+            }
+            .blue:hover {
+                background-color: rgba(0, 102, 255, 0.79);
+                color: rgb(255, 255, 255);
+            }
+            .red:hover {
+                background-color: rgba(255, 0, 0, 0.868);
+                color: rgb(255, 255, 255);
+            }
+            div.container {
+                text-align: center;
+            }
+            ul.centeredUL {
+                display: inline-block;
+                text-align: center;
+            }
         </style>
     </head>
     <body>
         <h1 style="color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; text-align: center; padding-top: 0.5%;">Hello, I'm @theonekingboo!</h1>
-        <img title="This is my avatar I use." src="https://cdn.discordapp.com/attachments/1187160247748530186/1198362716386107502/BigNormalKingboo.png?ex=65bea140&is=65ac2c40&hm=a218c4abdd36eb08a8a20ff7586f0a328a6129e9d229124ddbc0708351363cf6&" width="200" height="200" class="center">
-        <p style="color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; text-align: center; font-size: 21px;">This is my avatar!</p>
+        <hr>
         <br>
-        <a href="https://www.twitch.tv/theonekingboo" target="_blank">
-            <img src="https://imgs.search.brave.com/wKN4mlNdVp7qTcEDOnBF9Puf_Ezakk_f7q9xTb2RAEs/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/ZWRpZ2l0YWxhZ2Vu/Y3kuY29tLmF1L3dw/LWNvbnRlbnQvdXBs/b2Fkcy9Ud2l0Y2gt/aWNvbi1wdXJwbGUu/cG5n" title="Check me out on twitch!" style="width:128px;height:128px;" class="center">
-        </a>
-        <p style="color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; text-align: center; font-size: 21px;">This is my twitch!</p>
+        <div class="container">
+            <ul class="centeredUL">
+                <h2 style="text-align: center; ">Social Links</h2>
+                <li><a href="https://www.twitch.tv/theonekingboo" target="_blank" style="text-decoration: none;" class="purple">Twitch</a></li>
+                <li><a href="https://www.youtube.com/@theonekingboo" target="_blank" style="text-decoration: none;" class="red">Youtube</a></li>
+                <li><a href="https://discord.gg/VJFMeYzG" target="_blank" style="text-decoration: none;" class="blue">Discord</a></li>
+            </ul>
+        </div>
     </body>
 </html> 
