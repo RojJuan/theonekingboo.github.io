@@ -1,0 +1,15 @@
+{
+  "name": "theonekingboo.github.io",
+  "version": "1.0.0",
+  "description": "## This Repo is the home of theonekingboo's website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
