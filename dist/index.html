@@ -1,66 +1,425 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <script src="https://kit.fontawesome.com/6b8ce906a0.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kingboo</title>
-    <link rel="stylesheet" href="output.css" />
-  </head>
-  <body class="bg-gray-800">
-    <h1 class="text-white font-bold text-3xl text-center pt-8">
-      Hi, I'm @theonekingboo!
-    </h1>
-    <div class="container mx-auto text-center">
-      <img
-        src="https://cdn.discordapp.com/attachments/1187160247748530186/1198362716386107502/BigNormalKingboo.png?ex=65bea140&is=65ac2c40&hm=a218c4abdd36eb08a8a20ff7586f0a328a6129e9d229124ddbc0708351363cf6"
-        alt="Kingboo Image"
-        width="200px"
-        height="200px"
-        class="mx-auto my-4"
-      />
-      <ul class="flex flex-col items-center list-none p-0 w-72 mx-auto">
-        <h2 class="text-center text-white mb-4 font-bold text-3xl">
-          Social Links
-        </h2>
-        <li class="my-2">
-          <a
-            href="https://www.twitch.tv/theonekingboo"
-            target="_blank"
-            class="text-white no-underline border-dashed border-purple-500 hover:bg-purple-500 hover:text-white px-4 py-2 rounded"
-            >Twitch</a
-          >
-        </li>
-        <li class="my-2">
-          <a
-            href="https://www.youtube.com/@theonekingboo"
-            target="_blank"
-            class="text-white no-underline border-dashed border-red-500 hover:bg-red-500 hover:text-white px-4 py-2 rounded"
-            >Youtube</a
-          >
-        </li>
-        <li class="my-2">
-          <a
-            href="https://discord.gg/CD6WrPZgRy"
-            target="_blank"
-            class="text-white no-underline border-dashed border-blue-800 hover:bg-blue-900 hover:text-white px-4 py-2 rounded"
-            >Discord</a
-          >
-        </li>
-      </ul>
+    <style>
+        h1 {
+            width: fit-content;
+            margin: auto;
+            color: white;
+            font-family: 'Trebuchet MS';
+            font-size: 43px; 
+        }
+        .hoverRot {
+            transition: transform 0.3s, rotate 0.3s cubic-bezier(.32,1.07,.98,.89);
+        }
+        .hoverRot:hover {
+            transform: scale(1.2, 1.2);
+            rotate: 3deg;
+        }
+        .hoverRot:active {
+            transform: scale(1.1, 1.1);
+        }
+        .inversehoverRot {
+            transition: transform 0.3s, rotate 0.3s cubic-bezier(.32,1.07,.98,.89);
+        }
+        .inversehoverRot:hover {
+            transform: scale(1.2, 1.2);
+            rotate: -3deg;
+        }
+        .inversehoverRot:active {
+            transform: scale(1.1, 1.1);
+        }
+        .hover {
+            transition: transform 0.3s cubic-bezier(.32,1.07,.98,.89);
+        }
+        .hover:hover {
+            transform: scale(1.2, 1.2);
+        }
+        .hover:active {
+            transform: scale(1.1, 1.1);
+        }
+        .smhover {
+            transition: transform 0.3s cubic-bezier(.32,1.07,.98,.89);
+        }
+        .smhover:hover {
+            transform: scale(1.05, 1.05);
+        }
+        .smhover:active {
+            transform: scale(1.025, 1.025);
+        }
+        .grid {
+            display: grid;
+            gap: 15px 50px;
+            grid-template-columns: auto auto auto auto;
+            grid-template-columns: 700px 700px;
+        }
+    </style>
+</head>
+<body style="background-image: url(https://shorturl.at/cmFM5); background-repeat: no-repeat; background-size: 100% 160%;background-attachment: fixed; background-position: 0px -20px_;">
+    <script>
+        function popup() {
+            const cbAlert = document.getElementById("clipboardAlert")
+            cbAlert.style.opacity = 0.9;
+            cbAlert.style.scale = (1.1, 1.1);
+            setTimeout(function(){
+                cbAlert.style.opacity = 0;
+                cbAlert.style.scale = (1.0, 1.0);
+            }, 700)
+        }
+        function copy(text) {
+            navigator.clipboard.writeText(text)
+            popup()
+        }
+    </script>
+    <div style="position: sticky; top: 0; background-color: black; width: 700px; height: 100px; margin: auto; top: 50%; transform: translateY(-50%); border-radius: 12px; opacity: 0; transition: opacity 0.3s, scale 0.2s; z-index: 5;" id="clipboardAlert">
+        <h1 style="top: 50%; transform: translateY(50%);">Copied to Clipboard!</h1>
     </div>
-    <h1 class="text-3xl font-bold text-white text-center mt-8">About</h1>
-    <p class="text-lg text-white text-center mx-auto w-96 mt-4">
-      Hi! I'm @theonekingboo. I am the
-      <strong>best Linux GD player ever</strong>.
-    </p>
-    <p class="text-lg text-white text-center mx-auto w-96 mt-4">
-      I am also the <strong>Top Canadian-Colombian GD streamer</strong>
-    </p>
-    <p class="text-lg text-white text-center mx-auto w-96 mt-4">
-      I do the most random things on stream.
-    </p>
-    <p class="text-lg text-white text-center mx-auto w-96 mt-4">
-      You should watch sometime!
-    </p>
-  </body>
+    <h1  style="padding-top: 3px" class="hover"><strong>@theonekingboo</strong></h1>
+    <img src="https://cdn.discordapp.com/attachments/1187160247748530186/1199847857394569309/BigNormalKingboo.png?ex=65c40865&is=65b19365&hm=dcf0733aa1b5b900228f446069a2b66d893c9b6e4ceae24ffa2436e64f4ea778&" style="width: 200px; height: 200px; display: block; margin-left: auto; margin-right: auto;">
+    <div style="width: 500px; height: 100px; margin: auto; margin-top: 7px; text-align: center;" >   
+        <a href="https://www.youtube.com/@theonekingboo" target="_blank"><i class="fa-brands fa-youtube fa-5x inversehoverRot" style="margin: 20px; color: white;" title="Youtube" id="red"></i></a>
+        <a href="https://www.twitch.tv/theonekingboo" target="_blank"><i class="fa-brands fa-twitch fa-5x hover" style="color: white; margin: 20px;" title="Twitch"></i></a>
+        <a href="https://discord.gg/pBAjxCWH" target="_blank"><i class="fa-brands fa-discord fa-5x hoverRot" style="color: white; margin: 20px;"title="Discord"></i></a>
+    </div>
+    <div style="width: 600px; height: fit-content; background-color: #0167ff; margin:auto; margin-top: 60px; border-radius: 9px; border: dashed; border-width: 8px;">
+        <h1 style="padding-top: 14px;" class="hover">About</h1>
+        <p style="width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 22px; margin-left: 16px; margin-right: 16px;">Hi, I'm @theonekingboo. I'm the best Linux GD player. I hate Acu, and I stream on twitch! --more stuff tba</p>
+    </div>
+    <h1 style="margin-top: 40px;" class="hover">Kingboo News</h1>
+    <div style="text-align: center; width: 1500px; height: 400px; margin: auto; border-radius: 8px;">
+        <div style="width: 426.6666666667px; height: 240px; background-color: #0167ff; border-radius: 12px; border: solid; border-width: 7px; display: inline-block; margin-top: 20px;">
+            <h2 style="color: white; font-family: 'Trebuchet MS'; text-align: center; margin-top: 255px; font-size: 28px;">LEVEL REQUESTS</h2>
+            <h3 style="color: white; font-family: 'Trebuchet MS'; text-align: center; margin-top: -20px; font-size: 23px;">Stream Highlights</h3>
+        </div>
+        <div style="width: 426.6666666667px; height: 240px; background-color: #0167ff; border-radius: 12px; border: solid; border-width: 7px; display: inline-block; margin-top: 20px;">
+            <h2 style="color: white; font-family: 'Trebuchet MS'; text-align: center; margin-top: 255px; font-size: 28px;">TEMU FUND</h2>
+            <h3 style="color: white; font-family: 'Trebuchet MS'; text-align: center; margin-top: -20px; font-size: 23px;">Upcoming..</h3>
+        </div>
+    </div>
+    <img src="./images/demonlist.png" style="width: fit-content; height: 100px; display: block; margin-right: auto; margin-left: auto; margin-top: 50px;" class="hoverRot"></img>
+    <div style="width: 1500px; height: fit-content; margin: auto;" class="grid">
+        <div style="width: 700px; height: 250px; background-color: rgb(206, 22, 9); border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(92045288)">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+            <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">Indecisive</h2>
+            <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+            <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">92045288</h3>
+        </div>
+        <div style="width: 700px; height: 250px; background-color: rgb(206, 22, 9); border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(90295862)">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+            <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">giga challenge iii</h2>
+            <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+            <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">90295862</h3>
+        </div>
+        <div style="width: 700px; height: 250px; background-color: rgb(206, 22, 9); border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(90074790)">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+            <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">Twinsanity Finale</h2>
+            <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+            <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">90074790</h3>
+        </div>
+        <div style="width: 700px; height: 250px; background-color: rgb(206, 22, 9); border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(87039457)">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+            <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">ThisLevelisDual</h2>
+            <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+            <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">87039457</h3>
+        </div>
+        <div style="width: 700px; height: 250px; background-color: rgb(206, 22, 9); border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(92036220)">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+            <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">forgotten mirror</h2>
+            <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+            <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">92036220</h3>
+        </div>
+    </div>
+    <img src="./images/challengelist.png" style="width: fit-content; height: 100px; display: block; margin-right: auto; margin-left: auto; margin-top: 50px;" class="inversehoverRot"></img>
+    <div style="width: 1500px; height: fit-content; margin: auto;" class="grid">
+        <div style="width: 700px; height: 250px; background-color: #0058b1; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(96124668)">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+            <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">Eleventh variant</h2>
+            <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+            <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">96124668</h3>
+        </div>
+        <div style="width: 700px; height: 250px; background-color: #0058b1; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(96724131)">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+            <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">Twelfth variant</h2>
+            <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+            <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">96724131</h3>
+        </div>
+        <div style="width: 700px; height: 250px; background-color: #0058b1; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(87677660)">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+            <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">Spider challenge</h2>
+            <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+            <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">87677660</h3>
+        </div> 
+        <div style="width: 700px; height: 250px; background-color: #0058b1; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(94695278)">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+            <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">tatey to</h2>
+            <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+            <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">94695278</h3>
+        </div>
+        <div style="width: 700px; height: 250px; background-color: #0058b1; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(93959205)">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+            <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">n876444</h2>
+            <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+            <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">93959205 </h3>
+        </div>  
+        <div style="width: 700px; height: 250px; background-color: #0058b1; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(95835875)">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+            <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">dark latex</h2>
+            <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+            <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">95835875</h3>
+        </div>
+        <div style="width: 700px; height: 250px; background-color: #0058b1; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(95815810)">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+            <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">Latex</h2>
+            <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+            <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">95815810 </h3>
+        </div>  
+        <div style="width: 700px; height: 250px; background-color: #0058b1; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(92104445)">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+            <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">untitled3</h2>
+            <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+            <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">92104445</h3>
+        </div>
+        <div style="width: 700px; height: 250px; background-color: #0058b1; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(92704065)">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+            <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">ship borbor</h2>
+            <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+            <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">92704065 </h3>
+        </div>  
+        <div style="width: 700px; height: 250px; background-color: #0058b1; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(84021687)">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+            <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">unnamed0</h2>
+            <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+            <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">84021687</h3>
+        </div>
+        <div style="width: 700px; height: 250px; background-color: #0058b1; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(90168069)">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+            <h2 style="margin-left: 335px; margin-top: -200px; width: min-content; color: white; font-family: 'Trebuchet MS'; font-size: 33px;">IfDenouementWasCool</h2>
+            <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+            <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">90168069</h3>
+        </div>  
+        <div style="width: 700px; height: 250px; background-color: #0058b1; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(80568154)">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+            <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">sea men</h2>
+            <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+            <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">80568154</h3>
+        </div>
+        <div style="width: 700px; height: 250px; background-color: #0058b1; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(91300472)">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+            <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">XMC but its hard</h2>
+            <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+            <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">91300472</h3>
+        </div>  
+        <div style="width: 700px; height: 250px; background-color: #0058b1; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(93959205)">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+            <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">Rugby</h2>
+            <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+            <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">93959205</h3>
+        </div>
+        <div style="width: 700px; height: 250px; background-color: #0058b1; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(91681771)">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+            <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">gay</h2>
+            <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+            <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">91681771</h3>
+        </div>  
+        <div style="width: 700px; height: 250px; background-color: #0058b1; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(86272786)">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+            <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">BillNyechan</h2>
+            <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+            <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">86272786</h3>
+        </div>
+        <div style="width: 700px; height: 250px; background-color: #0058b1; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(92706067)">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+            <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">xanii's balls</h2>
+            <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+            <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">92706067</h3>
+        </div>  
+        <div style="width: 700px; height: 250px; background-color: #0058b1; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(85824031)">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+            <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">Walk</h2>
+            <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+            <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">85824031</h3>
+        </div>
+        <div style="width: 700px; height: 250px; background-color: #0058b1; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(86902208)">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+            <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">Femboys never clear</h2>
+            <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+            <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">86902208</h3>
+        </div>  
+        <div style="width: 700px; height: 250px; background-color: #0058b1; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(92103948 )">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+            <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">Thisiscraxybydavjt</h2>
+            <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+            <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">96124668</h3>
+        </div> 
+        
+        <img src="./images/legacy list.png" style="width: fit-content; height: 100px; display: block; margin-right: auto; margin: auto; margin-top: 30px; margin-left: 200px;" class="hover"></img>
+        <div style="width: 1500px; height: fit-content; margin: auto; margin-top: 200px; margin-left: -750px;" class="grid">
+            <div style="width: 700px; height: 250px; background-color: #0CDE0C; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(89082825)">
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+                <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">Final pisstination</h2>
+                <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+                <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">89082825</h3>
+            </div>
+            <div style="width: 700px; height: 250px; background-color: #0CDE0C; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(94481876)">
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+                <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">pooky po</h2>
+                <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+                <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">94481876</h3>
+            </div>
+            <div style="width: 700px; height: 250px; background-color: #0CDE0C; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(95856527)">
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+                <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">Maglinant</h2>
+                <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+                <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">95856527</h3>
+            </div>
+            <div style="width: 700px; height: 250px; background-color: #0CDE0C; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(89881579)">
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+                <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">GGs</h2>
+                <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+                <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">89881579</h3>
+            </div>
+            <div style="width: 700px; height: 250px; background-color: #0CDE0C; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(96653097)">
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+                <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">standing still</h2>
+                <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+                <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">96653097</h3>
+            </div>
+            <div style="width: 700px; height: 250px; background-color: #0CDE0C; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(89084645)">
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+                <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">Double it and give</h2>
+                <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+                <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">89084645</h3>
+            </div>
+            <div style="width: 700px; height: 250px; background-color: #0CDE0C; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(89105227)">
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+                <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">THE H</h2>
+                <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+                <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">89105227</h3>
+            </div>
+            <div style="width: 700px; height: 250px; background-color: #0CDE0C; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(87594405)">
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+                <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">the silent trials</h2>
+                <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+                <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">87594405</h3>
+            </div>
+            <div style="width: 700px; height: 250px; background-color: #0CDE0C; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(89551891)">
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+                <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">Low death ship</h2>
+                <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+                <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">89551891</h3>
+            </div>
+            <div style="width: 700px; height: 250px; background-color: #0CDE0C; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(87272988)">
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+                <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">Verified on mobile</h2>
+                <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+                <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">87272988</h3>
+            </div>
+            <div style="width: 700px; height: 250px; background-color: #0CDE0C; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(94638345)">
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+                <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">3 waves</h2>
+                <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+                <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">94638345</h3>
+            </div>
+            <div style="width: 700px; height: 250px; background-color: #0CDE0C; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(89439810)">
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+                <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">True play</h2>
+                <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+                <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">89439810</h3>
+            </div>
+            <div style="width: 700px; height: 250px; background-color: #0CDE0C; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(87857926)">
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+                <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">Waver</h2>
+                <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+                <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">87857926</h3>
+            </div>
+            <div style="width: 700px; height: 250px; background-color: #0CDE0C; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(86756896)">
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+                <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">Falling kratos</h2>
+                <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+                <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">86756896</h3>
+            </div>
+            <div style="width: 700px; height: 250px; background-color: #0CDE0C; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(87005756)">
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+                <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 34px;">DUALDUALDUALDUAL</h2>
+                <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+                <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">87005756</h3>
+            </div>
+            <div style="width: 700px; height: 250px; background-color: #0CDE0C; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(87176813)">
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+                <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">Exit this earth</h2>
+                <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+                <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">87176813</h3>
+            </div>
+            <div style="width: 700px; height: 250px; background-color: #0CDE0C; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(86950349)">
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+                <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">Spam cat</h2>
+                <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+                <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">86950349</h3>
+            </div>
+            <div style="width: 700px; height: 250px; background-color: #0CDE0C; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(85845025)">
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+                <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">Giga Challenge II</h2>
+                <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+                <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">85845025</h3>
+            </div>
+            <div style="width: 700px; height: 250px; background-color: #0CDE0C; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(87490720)">
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+                <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">4 jumps of heck</h2>
+                <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+                <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">87490720</h3>
+            </div>
+            <div style="width: 700px; height: 250px; background-color: #0CDE0C; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(88221428)">
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+                <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">test</h2>
+                <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+                <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">88221428</h3>
+            </div>
+            <div style="width: 700px; height: 250px; background-color: #0CDE0C; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(89403035)">
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+                <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">Wave power</h2>
+                <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+                <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">89403035</h3>
+            </div>
+            <div style="width: 700px; height: 250px; background-color: #0CDE0C; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(87472167)">
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+                <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">Dogwater</h2>
+                <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+                <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">87472167</h3>
+            </div>
+            <div style="width: 700px; height: 250px; background-color: #0CDE0C; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(87489152)">
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+                <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">Triple spike 10x</h2>
+                <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+                <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">87489152</h3>
+            </div>
+            <div style="width: 700px; height: 250px; background-color: #0CDE0C; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(85674211)">
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+                <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">Giga Challenge</h2>
+                <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+                <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">85674211</h3>
+            </div>
+            <div style="width: 700px; height: 250px; background-color: #0CDE0C; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(86879460)">
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+                <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">Death bot</h2>
+                <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+                <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">86879460</h3>
+            </div>
+            <div style="width: 700px; height: 250px; background-color: #0CDE0C; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(88221800)">
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+                <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">terminal failure 4</h2>
+                <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+                <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">88221800</h3>
+            </div>
+            <div style="width: 700px; height: 250px; background-color: #0CDE0C; border-radius: 12px; margin-top: 20px; margin-left: 10px; border: solid; border-width: 5px;" class="smhover" onclick="copy(88221602 )">
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/eHfoZcLRcLo" style="margin-top: 20px; margin-left: 20px; border-radius: 8px;"></iframe>
+                <h2 style="margin-left: 335px; margin-top: -200px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 43px;">hi</h2>
+                <h3 style="margin-left: 335px; margin-top: -40px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 38px;">@gd-user</h3>
+                <h3 style="margin-left: 335px; margin-top: -30px; width: fit-content; color: white; font-family: 'Trebuchet MS'; font-size: 45px;">88221602 </h3>
+            </div>
+        </div>
+</body>
 </html>
