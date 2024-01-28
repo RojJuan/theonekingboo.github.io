@@ -25,4 +25,4 @@ Feel free to contribute to the website by sending a pull request, all contributi
 
 For inquiries, collaborations, or just to say hi, feel free to reach out:
 
-- Discord: TheOneKingBoo
+- Discord: theonekingboo
