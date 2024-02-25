@@ -1,6 +1,6 @@
 # theonekingboo.github.io
 
-![TheOneKingBoo Logo](https://cdn.discordapp.com/attachments/908482825358020608/1193296630523379853/BigNormalKingboo.png?ex=65c7e297&is=65b56d97&hm=0bf0ced23b92a767c0255c0673158d9159f0d20d93423037c40a88f4c2329f74&)
+![TheOneKingBoo Logo](/BigNormalKingboo.png)
 
 Welcome to the official website of TheOneKingBoo!
 
